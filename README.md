@@ -12,16 +12,15 @@ conda install -c bioconda deepmei
 ```
 ##2.1 find the right path where the deepmeiv1 installed,assuming you are in a deepmei environment:
 which deepmeiv1
-##Assume the directory is:~/software/DeepMEI-main/DeepMEI/deepmeiv1
+##Assume the path is:~/software/DeepMEI-main/DeepMEI/deepmeiv1
 
-##2.2 download and uncompress the file  from https://github.com/Kanglu123/deepmei_v1.0.0/blob/master/DeepMEI.tar.gz
-tar -zxvf DeepMEI.tar.gz
-##the additional data and models are in the directory DeepMEI
+##2.2 clone file  from https://github.com/xuxif/DeepMEI.git
+git clone https://github.com/xuxif/DeepMEI.git
 
 ##2.3 copy data to the right path
-cp -r ./DeepMEI/1000g_high_callset ~/software/DeepMEI-main/DeepMEI/DeepMEI/1000g_high_callset
-cp -r ./DeepMEI/DeepMEI_model/referenc/* ~/software/DeepMEI-main/DeepMEI/DeepMEI/DeepMEI_model/reference
-cp -r ./DeepMEI/DeepMEI_model/weights/* ~/software/DeepMEI-main/DeepMEI/DeepMEI/DeepMEI_model/weights
+cp -r ./DeepMEI/DeepMEI/1000g_high_callset ~/software/DeepMEI-main/DeepMEI/DeepMEI/1000g_high_callset
+cp -r ./DeepMEI/DeepMEI/DeepMEI_model/reference ~/software/DeepMEI-main/DeepMEI/DeepMEI/DeepMEI_model/reference
+cp -r ./DeepMEI/DeepMEI/DeepMEI_model/weights ~/software/DeepMEI-main/DeepMEI/DeepMEI/DeepMEI_model/weights
 ```
 3. Test the tool:
 ```
