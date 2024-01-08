@@ -26,9 +26,15 @@ cp -r ./DeepMEI/DeepMEI/1000g_high_callset ~/software/DeepMEI-main/DeepMEI/DeepM
 cp -r ./DeepMEI/DeepMEI/DeepMEI_model/reference ~/software/DeepMEI-main/DeepMEI/DeepMEI/DeepMEI_model/reference
 cp -r ./DeepMEI/DeepMEI/DeepMEI_model/weights ~/software/DeepMEI-main/DeepMEI/DeepMEI/DeepMEI_model/weights
 ```
-3. Test the tool:
+3. run the tool:
 ```
-deepmeiv1 -h
+deepmeiv1 -i /path/to/your/bam_file/ -r /path/to/reference_sequence.fa -w  /path/to/DeepMEI output directory/
+or:
+bash /path/to/miniconda3/envs/deepmeiv1/bin/DeepMEI/DeepMEI_model/model_test_batch.sh -i /path/to/your/bam_file/ -r /path/to/reference_sequence.fa -w  /path/to/DeepMEI output directory/
+```
+4. The script 'model_test_batch.sh' is placed at:
+```
+/path/to/miniconda3/envs/deepmeiv1/bin/DeepMEI/DeepMEI_model
 ```
 ### note: 
 At the initial completion, this tool will merge model files from DeepMEI/DeepMEI_model/weights/val_best_model/variables and generate a 200Mb consensus model file at the same directory.
