@@ -8,7 +8,9 @@ DeepMEI is a convolutional neural network based tool to identify non-reference M
 ```
 conda create -n deepmei
 conda activate deepmei
-conda install -c bioconda deepmei
+conda install python=3.9
+conda install mamba
+mamba install -c bioconda deepmei
 ```
 2. Then, move additional data and models to the correct directory:
 ```
